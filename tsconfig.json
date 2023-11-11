@@ -1,0 +1,4 @@
+{
+  "include": ["./assembly"],
+  "extends": "./node_modules/assemblyscript/std/assembly.json"
+}
