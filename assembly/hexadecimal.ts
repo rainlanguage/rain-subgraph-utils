@@ -31,10 +31,7 @@ export function hexStringToArrayBuffer(value_: string): ArrayBuffer {
   const buff = new ArrayBuffer(value_.length / 2);
   const view = new DataView(buff);
   for (let i = 0, j = 0; i < value_.length; i = i + 2, j++) {
-    view.setUint8(
-      j,
-      u8(Number.parseInt(`${value_.at(i)}${value_.at(i + 1)}`, 16))
-    );
+    view.setUint8(j, u8.parse(`${value_.at(i)}${value_.at(i + 1)}`, 16));
   }
   return buff;
 }
