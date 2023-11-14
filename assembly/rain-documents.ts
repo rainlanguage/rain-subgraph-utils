@@ -1,7 +1,3 @@
-import { crypto } from "@graphprotocol/graph-ts";
-
-export const RAIN_META_DOCUMENT_HEX = "0xff0a89c674ee7874";
-
 /**
  * Constants representing magic numbers as hexadecimal strings used by Rain Protocol
  * to index information from metadata.
