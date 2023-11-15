@@ -1,6 +1,6 @@
 /**
  * Represents a utility class for converting a Map to a JSON string representation.
- * 
+ *
  * @example
  * ```typescript
  * export class ExtendedJsonStringExample extends JsonString {
@@ -13,8 +13,8 @@
  *}
  * ```
  */
- export class JsonString {
-  _obj: Map<string, string>;
+export class JsonString {
+  private _obj: Map<string, string>;
 
   /**
    * Initializes a new instance of the JsonString class with the given Map.
