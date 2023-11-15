@@ -44,7 +44,8 @@ export function hexStringToArrayBuffer(value_: string): ArrayBuffer {
   const buff = new ArrayBuffer(hex_length / 2);
   const view = new DataView(buff);
   for (let i = 0, j = 0; i < hex_length; i = i + 2, j++) {
-    let u8Value = u8.parse(`${value_.at(i)}${value_.at(i + 1)}`, 16);
+    let u8Value: u8 = U8.parseInt(`${value_.at(i)}${value_.at(i + 1)}`, 16);
+    // let u8Value: u8 = Number.parseInt`${value_.at(i)}${value_.at(i + 1)}`;
 
     view.setUint8(j, u8Value);
   }
