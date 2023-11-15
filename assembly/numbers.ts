@@ -3,6 +3,8 @@ import { BigInt, Bytes } from "@graphprotocol/graph-ts";
 /**
  * Generates a string with a specified number of trailing zeros.
  *
+ * If negative or zero values are provided, it will generate a default value (`1`)
+ *
  * @param num The number of zeros to generate in the string.
  * @returns A string with the specified number of trailing zeros.
  *
