@@ -23,10 +23,10 @@
     "utilities"
   ],
   "scripts": {
-    "asbuild:debug": "asc assembly/index.ts --target debug",
-    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild:debug": "asc assembly/index.ts --target debug -b build/index.debug.wasm -t build/index.debug.wat -j build/index.debug.js -d build/index.debug.d.ts",
+    "asbuild:release": "asc assembly/index.ts --target release -b build/index.wasm -t build/index.wat -j build/index.js -d build/index.d.ts",
     "asbuild": "npm run asbuild:debug && npm run asbuild:release",
-    "test": "npx asp"
+    "test": "asp"
   },
   "devDependencies": {
     "@as-pect/cli": "^6.2.4",
