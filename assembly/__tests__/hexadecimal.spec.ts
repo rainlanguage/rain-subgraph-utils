@@ -45,7 +45,7 @@ describe("Hexadecimal utilities tests", () => {
       }
 
       expect(value_u8.toString(16)).toBe(value_string, "wrong string value");
-      expect(u8.parse(value_string, 16)).toBe(value_u8, "wrong u8 value");
+      expect(U8.parseInt(value_string, 16)).toBe(value_u8, "wrong u8 value");
     }
   });
   it("should convert correctly from odd hex string and with 0x prefix", () => {
@@ -76,7 +76,7 @@ describe("Hexadecimal utilities tests", () => {
       }
 
       expect(value_u8.toString(16)).toBe(value_string, "wrong string value");
-      expect(u8.parse(value_string, 16)).toBe(value_u8, "wrong u8 value");
+      expect(U8.parseInt(value_string, 16)).toBe(value_u8, "wrong u8 value");
     }
   });
   it("should convert correctly from even hex string and without 0x prefix", () => {
@@ -103,7 +103,7 @@ describe("Hexadecimal utilities tests", () => {
       }
 
       expect(value_u8.toString(16)).toBe(value_string, "wrong string value");
-      expect(u8.parse(value_string, 16)).toBe(value_u8, "wrong u8 value");
+      expect(U8.parseInt(value_string, 16)).toBe(value_u8, "wrong u8 value");
     }
   });
   it("should convert correctly from odd hex string and without 0x prefix", () => {
@@ -133,7 +133,7 @@ describe("Hexadecimal utilities tests", () => {
       }
 
       expect(value_u8.toString(16)).toBe(value_string, "wrong string value");
-      expect(u8.parse(value_string, 16)).toBe(value_u8, "wrong u8 value");
+      expect(U8.parseInt(value_string, 16)).toBe(value_u8, "wrong u8 value");
     }
   });
 });

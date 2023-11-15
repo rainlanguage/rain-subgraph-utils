@@ -6,7 +6,7 @@
   "repository": "https://github.com/rainprotocol/rain-subgraph-utils,git",
   "author": "Rain Protocol",
   "license": "MIT",
-  "type": "module",
+  "type": "commonjs",
   "exports": {
     ".": {
       "import": "./build/release.js",
@@ -29,8 +29,8 @@
     "test": "npx asp"
   },
   "devDependencies": {
-    "@as-pect/cli": "^8.1.0",
-    "assemblyscript": "^0.27.17"
+    "@as-pect/cli": "^6.2.4",
+    "assemblyscript": "=0.19.23"
   },
   "dependencies": {
     "@graphprotocol/graph-ts": "^0.31.0"
