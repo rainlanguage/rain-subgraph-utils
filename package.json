@@ -1,6 +1,6 @@
 {
   "name": "@rainprotocol/subgraph-utils",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Common utilities for rain subgraphs",
   "main": "assembly/index.ts",
   "repository": "https://github.com/rainprotocol/rain-subgraph-utils,git",
