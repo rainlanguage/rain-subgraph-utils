@@ -10,7 +10,11 @@
  */
 export function getEvenHexString(value_: string): string {
   if (value_.length % 2 != 0) {
-    value_ = value_.slice(0, 2) + "0" + value_.slice(2);
+    if (value_.startsWith("0x")) {
+      value_ = value_.slice(0, 2) + "0" + value_.slice(2);
+    } else {
+      value_ = "0" + value_;
+    }
   }
 
   return value_;
@@ -28,10 +32,21 @@ export function getEvenHexString(value_: string): string {
 export function hexStringToArrayBuffer(value_: string): ArrayBuffer {
   value_ = getEvenHexString(value_);
 
-  const buff = new ArrayBuffer(value_.length / 2);
+  if (value_.startsWith("0x")) {
+    value_ = value_.slice(2);
+  }
+  let hex_length = value_.length;
+
+  if (value_.length % 2 == 1) {
+    value_ = "0".concat(value_);
+  }
+
+  const buff = new ArrayBuffer(hex_length / 2);
   const view = new DataView(buff);
-  for (let i = 0, j = 0; i < value_.length; i = i + 2, j++) {
-    view.setUint8(j, u8.parse(`${value_.at(i)}${value_.at(i + 1)}`, 16));
+  for (let i = 0, j = 0; i < hex_length; i = i + 2, j++) {
+    let u8Value = u8.parse(`${value_.at(i)}${value_.at(i + 1)}`, 16);
+
+    view.setUint8(j, u8Value);
   }
   return buff;
 }

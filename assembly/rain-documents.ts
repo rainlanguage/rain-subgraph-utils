@@ -39,3 +39,5 @@ export class MagicNumbers {
    */
   static EXPRESSION_DEPLOYER_V2_BYTECODE_V1: string = "0xffdb988a8cd04d32";
 }
+
+// TODO: Convert to U64

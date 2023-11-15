@@ -4,11 +4,8 @@ import {
   hexStringToArrayBuffer,
   isHexString,
 } from "./hexadecimal";
+import { hexToBigInt, getZeros } from "./numbers";
 
 export { MagicNumbers };
 export { getEvenHexString, hexStringToArrayBuffer, isHexString };
-
-// Your additional functions
-export function add(a: i32, b: i32): i32 {
-  return a + b;
-}
+export { hexToBigInt, getZeros };
