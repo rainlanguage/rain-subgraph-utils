@@ -2,9 +2,10 @@
   "name": "@rainprotocol/subgraph-utils",
   "version": "0.0.1",
   "description": "Common utilities for rain subgraphs",
-  "devDependencies": {
-    "assemblyscript": "^0.27.17"
-  },
+  "main": "assembly/index.ts",
+  "repository": "https://github.com/rainprotocol/rain-subgraph-utils,git",
+  "author": "Rain Protocol",
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
@@ -12,11 +13,20 @@
       "types": "./build/release.d.ts"
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "asbuild:debug": "asc assembly/index.ts --target debug",
     "asbuild:release": "asc assembly/index.ts --target release",
     "asbuild": "npm run asbuild:debug && npm run asbuild:release",
-    "test": "node tests",
-    "start": "npx serve ."
+    "test": "npx asp"
+  },
+  "devDependencies": {
+    "@as-pect/cli": "^8.1.0",
+    "assemblyscript": "^0.27.17"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-ts": "^0.31.0"
   }
 }

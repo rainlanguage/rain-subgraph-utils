@@ -1,5 +1,13 @@
-// The entry file of your WebAssembly module.
+import { MagicNumbers } from "./rain-documents";
+import {
+  getEvenHexString,
+  hexStringToArrayBuffer,
+  isHexString,
+} from "./hexadecimal";
+import { hexToBigInt, getZeros } from "./numbers";
+import { JsonString } from "./json_string";
 
-export function add(a: i32, b: i32): i32 {
-  return a + b;
-}
+export { MagicNumbers };
+export { getEvenHexString, hexStringToArrayBuffer, isHexString };
+export { hexToBigInt, getZeros };
+export { JsonString };
