@@ -14,7 +14,7 @@
  * ```
  */
 export class JsonString {
-  private _obj: Map<string, string>;
+  protected _obj: Map<string, string>;
 
   /**
    * Initializes a new instance of the JsonString class with the given Map.
