@@ -29,10 +29,10 @@
     "test": "asp"
   },
   "devDependencies": {
-    "@as-pect/cli": "^6.2.4",
-    "assemblyscript": "=0.19.23"
+    "@as-pect/cli": "^6.2.4"
   },
   "dependencies": {
+    "assemblyscript": "=0.19.23",
     "@graphprotocol/graph-ts": "^0.31.0"
   }
 }
